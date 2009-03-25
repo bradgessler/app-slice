@@ -1,5 +1,5 @@
 require 'domain_slice'
-require 'rails/initializer'
+require File.join(File.dirname(__FILE__), %w[rails initializer])
 
 module DomainSlice
   module Rails
