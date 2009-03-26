@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.date = %q{2009-03-25}
   s.description = %q{Partition rails apps by domains}
   s.email = %q{brad@conden.se}
-  s.files = ["VERSION.yml", "lib/domain_slice", "lib/domain_slice/middleware", "lib/domain_slice/middleware/static.rb", "lib/domain_slice/middleware.rb", "lib/domain_slice/rails", "lib/domain_slice/rails/initializer.rb", "lib/domain_slice/rails.rb", "lib/domain_slice.rb", "spec/spec_helper.rb", "spec/specs", "spec/specs/domain_slice_spec.rb", "spec/specs/rails_spec.rb"]
+  s.files = ["VERSION.yml", "lib/domain_slice", "lib/domain_slice/middleware", "lib/domain_slice/middleware/static.rb", "lib/domain_slice/middleware.rb", "lib/domain_slice/rails", "lib/domain_slice/rails/initializer.rb", "lib/domain_slice/rails.rb", "lib/domain_slice.rb", "spec/fixtures", "spec/spec_helper.rb", "spec/specs", "spec/specs/domain_slice_spec.rb", "spec/specs/middleware_spec.rb", "spec/specs/rails_spec.rb"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/bradgessler/domain-slice}
   s.rdoc_options = ["--inline-source", "--charset=UTF-8"]
