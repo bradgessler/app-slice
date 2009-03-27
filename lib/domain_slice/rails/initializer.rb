@@ -37,6 +37,7 @@ module DomainSlice
         # of function arity in future versions of rails.
         def run_with_domain_package(command = :process, configuration=::Rails::Configuration.new, &block)
           run_without_domain_package(command, DomainSlice::Rails.configure(configuration), &block)
+          DomainSlice::Rails.init!
         end
       end
     end

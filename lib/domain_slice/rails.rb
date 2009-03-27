@@ -5,9 +5,9 @@ module DomainSlice
   module Rails
     class << self
       def init!
-        ::ActionController::Base.view_paths.unshift File.join(root, %w[app views])
         ::Rails.public_path = File.join(root, 'public')
         ::ActionController::Routing::Routes.add_configuration_file File.join(config_path, 'routes.rb')
+        ::ActionController::Base.view_paths.unshift File.join(root, %w[app views])
       end
       
       def root
@@ -15,7 +15,7 @@ module DomainSlice
       end
       
       def environment_path
-        File.join(config_path, 'environments', "#{Rails.env}.rb")
+        File.join(config_path, 'environments', "#{RAILS_ENV}.rb")
       end
       
       def root_environment_path

@@ -17,8 +17,6 @@ module DomainSlice
         path        = env['PATH_INFO'].chomp('/')
         method      = env['REQUEST_METHOD']
         
-        debugger
-        
         if FILE_METHODS.include?(method)
           if rack_file = file_exist?(path)
             return rack_file.call(env)
