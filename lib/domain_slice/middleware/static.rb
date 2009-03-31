@@ -1,5 +1,3 @@
-require 'rack/utils'
-
 module DomainSlice
   module Middleware
     class Static
