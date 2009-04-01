@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{domain_slice}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brad Gessler"]
-  s.date = %q{2009-03-30}
+  s.date = %q{2009-04-01}
   s.description = %q{Partition rails apps by domains}
   s.email = %q{brad@conden.se}
   s.files = ["VERSION.yml", "lib/domain_slice", "lib/domain_slice/middleware", "lib/domain_slice/middleware/static.rb", "lib/domain_slice/middleware.rb", "lib/domain_slice/rails", "lib/domain_slice/rails/initializer.rb", "lib/domain_slice/rails.rb", "lib/domain_slice.rb", "spec/fixtures", "spec/spec_helper.rb", "spec/specs", "spec/specs/domain_slice_spec.rb", "spec/specs/middleware_spec.rb", "spec/specs/rails_spec.rb"]

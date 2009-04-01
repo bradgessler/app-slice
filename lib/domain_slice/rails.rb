@@ -7,7 +7,11 @@ module DomainSlice
       def init!
         ::Rails.public_path = File.join(root, 'public')
         ::ActionController::Routing::Routes.add_configuration_file File.join(config_path, 'routes.rb')
-        ::ActionController::Base.view_paths.unshift File.join(root, %w[app views])
+        # Update frameworks with view_paths
+        [::ActionController, ::ActionMailer].each do |framework|
+          framework::Base.send(:view_paths).unshift(view_path)
+        end
+        @initialized = true
       end
       
       def root
@@ -26,10 +30,18 @@ module DomainSlice
         File.join(root, 'config')
       end
       
+      def view_path
+        File.join(root, %w[app views])
+      end
+      
       def configure(configuration = ::Rails::Configuration.new)
         # Create our new configuration block here
         configuration.database_configuration_file = database_configuration_file
         return configuration
+      end
+      
+      def initialized?
+        @initialized
       end
       
     protected
