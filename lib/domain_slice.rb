@@ -10,7 +10,7 @@ module DomainSlice
     
     # Binds the DomainSlice to the environmental variable DOMAIN_SLICE
     def init!
-      @domain = DOMAIN_SLICE
+      @domain = DOMAIN_SLICE || ''
     end
   end
 end
