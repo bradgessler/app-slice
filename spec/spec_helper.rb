@@ -2,22 +2,22 @@ require 'rubygems'
 require 'spec'
 
 # Loads various ruby files and application stacks for testing purposes
-module DomainSlice
+module AppSlice
   module TestHelpers
     class << self
-      def require_domain_slice!
-        require File.join(File.dirname(__FILE__), %w[.. lib domain_slice])
+      def require_app_slice!
+        require File.join(File.dirname(__FILE__), %w[.. lib app_slice])
       end
       
       def require_middleware!
         require 'rack'
-        require File.join(File.dirname(__FILE__), %w[.. lib domain_slice middleware])
+        require File.join(File.dirname(__FILE__), %w[.. lib app_slice middleware])
       end
       
       def require_rails!
-        # Load whatever is needed to test domain slice integration with rails
+        # Load whatever is needed to test app slice integration with rails
         # require 'rails'
-        require File.join(File.dirname(__FILE__), %w[.. lib domain_slice rails])
+        require File.join(File.dirname(__FILE__), %w[.. lib app_slice rails])
       end
     end
   end

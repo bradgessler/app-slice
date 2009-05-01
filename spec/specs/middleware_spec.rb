@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), %w[.. spec_helper])
 
-DomainSlice::TestHelpers::require_middleware!
+AppSlice::TestHelpers::require_middleware!
 
-describe DomainSlice::Middleware::Static do
+describe AppSlice::Middleware::Static do
   
 end
