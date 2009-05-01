@@ -1,6 +1,6 @@
 require 'rubygems'
-require 'app_slice'
-require File.join(File.dirname(__FILE__), %w[middleware static])
+require File.join(File.dirname(__FILE__), '../app_slice')
+require File.join(File.dirname(__FILE__), 'middleware/static')
 
 module AppSlice
   module Middleware
