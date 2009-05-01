@@ -16,7 +16,7 @@ module AppSlice
       
       def root
         if AppSlice.exists?
-          File.join(RAILS_ROOT, 'apps', AppSlice.app)
+          File.join(RAILS_ROOT, 'app_slices', AppSlice.app)
         else
           RAILS_ROOT
         end
