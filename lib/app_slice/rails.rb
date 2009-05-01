@@ -15,7 +15,11 @@ module AppSlice
       end
       
       def root
-        File.join(RAILS_ROOT, 'apps', AppSlice.app)
+        if AppSlice.exists?
+          File.join(RAILS_ROOT, 'apps', AppSlice.app)
+        else
+          RAILS_ROOT
+        end
       end
       
       def environment_path
