@@ -38,7 +38,7 @@ module AppSlice
         end
         
         def app_slice_public_path
-          File.join(RAILS_ROOT, 'apps', AppSlice.app, 'public')
+          File.join(RAILS_ROOT, 'app_slices', AppSlice.app, 'public')
         end
         
         # TODO [BG Mar 09] This might have to be optimized instead of a stupid check
