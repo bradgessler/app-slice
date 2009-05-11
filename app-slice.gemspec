@@ -2,14 +2,14 @@
 
 Gem::Specification.new do |s|
   s.name = %q{app-slice}
-  s.version = "0.2.3"
+  s.version = "0.2.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brad Gessler"]
-  s.date = %q{2009-05-02}
+  s.date = %q{2009-05-11}
   s.description = %q{Partition rails apps by apps}
   s.email = %q{brad@conden.se}
-  s.files = ["VERSION.yml", "lib/app_slice", "lib/app_slice/middleware", "lib/app_slice/middleware/static.rb", "lib/app_slice/middleware.rb", "lib/app_slice/rails", "lib/app_slice/rails/initializer.rb", "lib/app_slice/rails.rb", "lib/app_slice.rb", "spec/fixtures", "spec/spec_helper.rb", "spec/specs", "spec/specs/app_slice_spec.rb", "spec/specs/middleware_spec.rb", "spec/specs/rails_spec.rb"]
+  s.files = ["VERSION.yml", "lib/app_slice", "lib/app_slice/middleware", "lib/app_slice/middleware/static.rb", "lib/app_slice/middleware.rb", "lib/app_slice/rails", "lib/app_slice/rails/file.rb", "lib/app_slice/rails/initializer.rb", "lib/app_slice/rails.rb", "lib/app_slice.rb", "spec/fixtures", "spec/spec_helper.rb", "spec/specs", "spec/specs/app_slice_spec.rb", "spec/specs/middleware_spec.rb", "spec/specs/rails_spec.rb"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/bradgessler/app-slice}
   s.rdoc_options = ["--inline-source", "--charset=UTF-8"]
