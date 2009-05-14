@@ -15,9 +15,6 @@ module AppSlice
       end
       
       def require_rails!
-        # Load whatever is needed to test app slice integration with rails
-        # require 'rails'
-        require File.join(File.dirname(__FILE__), %w[.. lib app_slice rails])
       end
     end
   end

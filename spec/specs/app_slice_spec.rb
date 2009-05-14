@@ -12,12 +12,4 @@ describe AppSlice do
     AppSlice.init!
     AppSlice.app.should eql(APP_SLICE)
   end
-  
-  it "should have name" do
-    AppSlice.should respond_to(:name)
-  end
-  
-  it "should have app" do
-    AppSlice.should respond_to(:app)
-  end
 end
