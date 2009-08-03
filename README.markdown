@@ -1,16 +1,16 @@
 # App Slice
 
-App slices are a way to build private-label websites and deploy them to a particular server.
+App slices are a way to build private-label websites and deploy them to a web server.
 
-WARNING: App Slice is very immature. While its being used in production on certain applications, I do not recommend this for production use right out of the box. This code is also not well tested.
+WARNING: The app-slice gem is very immature. While its being used in production on certain applications, I do not recommend this for production use right out of the box. This code is also not well tested.
 
 # Goals
 
 The goal of the app slice gem is to:
 
- * Simplify the development of private label websites that are derived from a similar core application
+ * Simplify the development, testing, and deployment of private label websites that are derived from a core application.
  * Deploy the various private labels to their own servers (probably via Capistrano)
- 
+  
 ## Use Case
 
 These are some commands that may be issued to run the application with 
@@ -22,6 +22,10 @@ various private labels:
     rake test # assumes core, unless you specify otherwise
     cap whitelabel:production deploy
     cap core:production deploy
+
+Today the app-slice only starts the server via rackup with the following command:
+
+    APP_SLICE=whitelable rackup config.ru
 
 # License
 
