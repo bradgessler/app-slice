@@ -9,9 +9,9 @@ module AppSlice
         ::Rails.public_path = public_path
         ::ActionController::Routing::Routes.add_configuration_file File.join(config_path, 'routes.rb')
         # Update frameworks with view_paths
-        [::ActionController, ::ActionMailer].each do |framework|
-          framework::Base.send(:view_paths).unshift(view_path)
-        end
+        ::ActionController::Base.send(:view_paths).unshift(view_path)
+        ::ActionController::Base.flush_cache(:_pick_partial_template)
+        ::ActionMailer::Base.send(:view_paths).unshift(view_path)
         @initialized = true
       end
       
