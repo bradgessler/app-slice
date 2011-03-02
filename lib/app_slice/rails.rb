@@ -1,13 +1,13 @@
 require File.join(File.dirname(__FILE__), %w[.. app_slice])
 require File.join(File.dirname(__FILE__), %w[rails initializer])
 require File.join(File.dirname(__FILE__), %w[rails file])
+require File.join(File.dirname(__FILE__), %w[rails routes])
 
 module AppSlice
   module Rails
     class << self
       def init!
         ::Rails.public_path = public_path
-        ::ActionController::Routing::Routes.add_configuration_file File.join(config_path, 'routes.rb')
         # Update frameworks with view_paths
         ::ActionController::Base.prepend_view_path(view_path)
         ::ActionMailer::Base.view_paths.unshift(view_path)
@@ -53,10 +53,6 @@ module AppSlice
       end
       
     protected
-      def routes_configuration_file
-        File.join(config_path, 'routes.rb')
-      end
-      
       def database_configuration_file
         File.join(config_path, 'database.yml')
       end
